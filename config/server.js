@@ -13,6 +13,7 @@ consign()
 .include('app/routes') // diretorio incluido para que o consign faça o scan das rotas.
 .then('config/dbConnection.js') // autoload do aquivo do banco de dados , para evitar fazer require em paginhas que ultilizarão o banco de dados.
 .then('app/models')
+.then('app/controllers')
 .into(app); // lançando os modulos escaneados do diretorio routers para o arquivo app.js 
  
 module.exports = app;
